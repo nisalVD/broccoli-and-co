@@ -1,6 +1,4 @@
 .container {
-  position: fixed;
-  top: 0;
   height: 4rem;
   background-color: var(--bg-secondary);
   width: 100%;
