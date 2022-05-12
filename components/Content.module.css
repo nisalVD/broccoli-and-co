@@ -1,0 +1,58 @@
+.container {
+  height: 100%;
+}
+
+.broccoliContainer {
+  position: absolute;
+  bottom: 0;
+}
+
+
+.innerContainer {
+  height: 100%;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.primaryText {
+  font-family: var(--font-primary);
+  font-size: 6rem;
+  color: var(--font-color-secondary);
+  margin: 0;
+  line-height: 5rem;
+  text-align: center;
+}
+
+.secondaryText {
+  font-family: var(--font-secondary);
+  color: var(--font-color-secondary);
+  font-family: 300;
+  text-align: center;
+}
+
+.inviteButton {
+  margin-top: 1rem;
+  display: inline-block;
+  border: 0.2rem solid var(--font-color-primary);
+  text-decoration: none;
+  outline-color: var(--bg-secondary);
+  cursor: pointer;
+  width: 16rem;
+  height: 4rem;
+  background-color: transparent;
+}
+
+.inviteButton:hover {
+  color: var(--font-color-secondary);
+  border: 0.2rem solid var(--font-color-secondary);
+}
+
+.inviteButtonText {
+  font-family: var(--font-primary);
+  font-size: 1.8rem;
+}
+
+

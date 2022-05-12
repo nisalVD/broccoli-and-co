@@ -1,6 +1,9 @@
-import type { NextPage, GetStaticProps  } from "next";
-import Header from "../component/Header";
-import Footer from "../component/Footer";
+import type { NextPage, GetStaticProps } from "next";
+import styles from "../styles/Home.module.css";
+
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import Content from "../components/Content";
 
 interface Props {
   heading: string;
@@ -14,15 +17,12 @@ const Home: NextPage<Props> = ({
   footerBottomText,
 }) => {
   return (
-    <div>
+    <div className={styles.container}>
       <Header heading={heading} />
-      <main>
-        Brocolli
-      </main>
-      <Footer
-        topText={footerTopText}
-        bottomText={footerBottomText}
-      />
+      <div className={styles.contentContainer}>
+        <Content />
+      </div>
+      <Footer topText={footerTopText} bottomText={footerBottomText} />
     </div>
   );
 };
@@ -33,7 +33,7 @@ export const getStaticProps: GetStaticProps<Props> = () => {
     props: {
       heading: "BROCCOLI & CO",
       footerTopText: "Made With ♥ In Melbourne",
-      footerBottomText: "2016. All Right Reserved",
+      footerBottomText: "",
     },
   };
 };

@@ -3,6 +3,8 @@
   --font-color-secondary: #54945F;
   --bg-primary: #F5F4EF;
   --bg-secondary: #FFFFFE;
+  --font-primary: 'Bebas Neue', cursive;
+  --font-secondary: 'Roboto', sans-serif;
 }
 
 html,
@@ -12,5 +14,9 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-color: var(--bg-primary);
+  height: 100%;
 }
 
+* {
+  box-sizing: border-box;
+}
