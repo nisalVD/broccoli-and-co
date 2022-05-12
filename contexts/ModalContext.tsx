@@ -2,12 +2,12 @@ import { createContext, useContext, ReactNode, useState } from "react";
 
 type ModalContextType = {
   isModalOpen: boolean;
-  setModalOpen: (modalState: boolean) => void;
+  setModalState: (modalState: boolean) => void;
 };
 
 const initialModalContext: ModalContextType = {
   isModalOpen: false,
-  setModalOpen: () => {},
+  setModalState: () => {},
 };
 
 export const ModalContext =
@@ -22,14 +22,14 @@ type Props = {
 };
 
 export const ModalProvider: React.FC<Props> = ({ children }) => {
-  const [isModalOpen, setModalOpen] = useState(false);
+  const [isModalOpen, setModalState] = useState(false);
 
   return (
     <>
       <ModalContext.Provider
         value={{
           isModalOpen,
-          setModalOpen,
+          setModalState,
         }}
       >
         {children}
