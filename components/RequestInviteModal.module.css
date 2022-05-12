@@ -1,0 +1,62 @@
+.emailNameForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 360px;
+  width: 360px;
+}
+
+.errorMessaging {
+  color: #dc3545;
+  font-family: var(--font-secondary);
+  font-size: 0.8rem;
+  margin: 0;
+  margin-bottom: 0.2rem;
+}
+
+.formInput {
+  width: 100%;
+  margin-top: 1.2rem;
+  font-family: var(--font-secondary);
+  font-size: 0.8rem;
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #fff;
+  margin: 0 0 5px;
+  padding: 10px;
+}
+
+.formInput:hover {
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -moz-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+  border: 1px solid #aaa;
+}
+
+.formInput:focus {
+  outline: 0;
+  border: 1px solid #aaa;
+}
+
+.submitButton {
+  margin-bottom: 2rem;
+  display: inline-block;
+  border: 0.2rem solid var(--font-color-primary);
+  text-decoration: none;
+  outline-color: var(--bg-secondary);
+  cursor: pointer;
+  width: 10rem;
+  height: 2rem;
+  background-color: transparent;
+  margin-top: auto;
+}
+
+.submitButton:hover {
+  color: var(--font-color-secondary);
+  border: 0.2rem solid var(--font-color-secondary);
+}
+
+.submitButtonText {
+  font-family: var(--font-primary);
+  font-size: 1rem;
+}
