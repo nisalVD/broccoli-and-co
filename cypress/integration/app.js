@@ -81,7 +81,7 @@ describe("requestInviteModal", () => {
       .should("contain", "This email address is already in use");
   });
 
-  it.only("should be able to retry with a valid email after failing with used email", () => {
+  it("should be able to retry with a valid email after failing with used email", () => {
     cy.get("#fullName").type(fullName);
     cy.get("#email").type("usedemail@blinq.app");
     cy.get("#confirmEmail").type("usedemail@blinq.app");
