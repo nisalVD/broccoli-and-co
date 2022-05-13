@@ -1,0 +1,11 @@
+.container {
+  height: 1.25rem;
+}
+
+.errorMessaging {
+  color: #dc3545;
+  font-family: var(--font-secondary);
+  font-size: 0.8rem;
+  margin: 0;
+  margin-bottom: 0.2rem;
+}
