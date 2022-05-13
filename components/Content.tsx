@@ -25,6 +25,7 @@ const Content: React.FC<Props> = ({
         <p className={styles.primaryText}>{headingTwo}</p>
         <p className={styles.secondaryText}>{secondaryText}</p>
         <button
+					id="requestInviteButton"
           onClick={(e) => {
             e.preventDefault();
             setModalState(true);

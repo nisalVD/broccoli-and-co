@@ -5,6 +5,7 @@ const RequestInviteCompletion = () => {
   const { setModalState } = useModal();
   return (
     <div
+      id="requestInviteCompletion"
       style={{
         display: "flex",
         flexDirection: "column",

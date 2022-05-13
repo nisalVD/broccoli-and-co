@@ -59,6 +59,7 @@ const RequestInviteModal: React.FC = () => {
         <RequestInviteCompletion />
       ) : (
         <form
+          id="requestInviteForm"
           className={styles.emailNameForm}
           onSubmit={handleSubmit(onSubmit)}
         >
@@ -70,6 +71,10 @@ const RequestInviteModal: React.FC = () => {
             aria-invalid={errors.fullName ? "true" : "false"}
             placeholder="Full Name"
             {...register("fullName", {
+              minLength: {
+                value: 3,
+                message: "Please provide a valid full name",
+              },
               required: "Please provide a full name.",
             })}
           />
@@ -125,7 +130,11 @@ const RequestInviteModal: React.FC = () => {
           {loading ? (
             <Waveform />
           ) : (
-            <button type="submit" className={styles.submitButton}>
+            <button
+              id="requestInviteSubmitButton"
+              type="submit"
+              className={styles.submitButton}
+            >
               <span className={styles.submitButtonText}>Send</span>
             </button>
           )}
