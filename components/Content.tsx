@@ -3,15 +3,27 @@ import Image from "next/image";
 import styles from "./Content.module.css";
 import { useModal } from "../contexts/ModalContext";
 
-const Content: React.FC = () => {
+interface Props {
+  headingOne: string;
+  headingTwo: string;
+  secondaryText: string;
+  inviteButtonText: string;
+}
+
+const Content: React.FC<Props> = ({
+  headingOne,
+  headingTwo,
+  secondaryText,
+  inviteButtonText
+}) => {
   const { setModalState } = useModal();
 
   return (
     <div className={styles.container}>
       <div className={styles.innerContainer}>
-        <p className={styles.primaryText}>A BETTER WAY TO</p>
-        <p className={styles.primaryText}>ENJOY EVERY DAY</p>
-        <p className={styles.secondaryText}>Be first to know when we launch.</p>
+        <p className={styles.primaryText}>{headingOne}</p>
+        <p className={styles.primaryText}>{headingTwo}</p>
+        <p className={styles.secondaryText}>{secondaryText}</p>
         <button
           onClick={(e) => {
             e.preventDefault();
@@ -19,7 +31,7 @@ const Content: React.FC = () => {
           }}
           className={styles.inviteButton}
         >
-          <span className={styles.inviteButtonText}>Request An Invite</span>
+          <span className={styles.inviteButtonText}>{inviteButtonText}</span>
         </button>
       </div>
       <div className={styles.broccoliContainer}>

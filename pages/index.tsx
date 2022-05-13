@@ -11,19 +11,32 @@ interface Props {
   heading: string;
   footerTopText: string;
   footerBottomText: string;
+  contentHeadingOne: string,
+  contentHeadingTwo: string,
+  contentSecondaryText: string,
+  contentInviteButtonText: string,
 }
 
 const Home: NextPage<Props> = ({
   heading,
   footerTopText,
   footerBottomText,
+  contentHeadingOne,
+  contentHeadingTwo,
+  contentSecondaryText,
+  contentInviteButtonText,
 }) => {
   return (
     <>
       <div className={styles.container}>
         <Header heading={heading} />
         <div className={styles.contentContainer}>
-          <Content />
+          <Content
+            headingOne={contentHeadingOne}
+            headingTwo={contentHeadingTwo}
+            secondaryText={contentSecondaryText}
+            inviteButtonText={contentInviteButtonText}
+          />
         </div>
         <Footer topText={footerTopText} bottomText={footerBottomText} />
       </div>
@@ -39,6 +52,10 @@ export const getStaticProps: GetStaticProps<Props> = () => {
       heading: "BROCCOLI & CO",
       footerTopText: "Made With ♥ In Melbourne",
       footerBottomText: "",
+      contentHeadingOne: "A BETTER WAY TO",
+      contentHeadingTwo: "ENJOY EVERY DAY",
+      contentSecondaryText: "Be first to know when we launch",
+      contentInviteButtonText: "Request An Invite",
     },
   };
 };
