@@ -6,14 +6,6 @@
   width: 360px;
 }
 
-.errorMessaging {
-  color: #dc3545;
-  font-family: var(--font-secondary);
-  font-size: 0.8rem;
-  margin: 0;
-  margin-bottom: 0.2rem;
-}
-
 .formInput {
   width: 100%;
   margin-top: 1.2rem;
@@ -59,4 +51,9 @@
 .submitButtonText {
   font-family: var(--font-primary);
   font-size: 1rem;
+}
+
+.secondaryText {
+  font-family: var(--font-secondary);
+  font-size: 0.8rem;
 }

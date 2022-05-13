@@ -7,6 +7,7 @@ specifiers:
   '@types/react': 18.0.9
   '@types/react-dom': 18.0.3
   '@types/react-modal': ^3.13.1
+  '@uiball/loaders': ^1.2.6
   eslint: 8.15.0
   eslint-config-next: 12.1.6
   next: 12.1.6
@@ -19,6 +20,7 @@ specifiers:
 dependencies:
   '@headlessui/react': 1.6.1_react-dom@18.1.0+react@18.1.0
   '@hookform/error-message': 2.0.0_10434e8f67c997cc0c5a8fec630b68c3
+  '@uiball/loaders': 1.2.6_react-dom@18.1.0+react@18.1.0
   next: 12.1.6_react-dom@18.1.0+react@18.1.0
   react: 18.1.0
   react-dom: 18.1.0_react@18.1.0
@@ -346,6 +348,16 @@ packages:
       '@typescript-eslint/types': 5.23.0
       eslint-visitor-keys: 3.3.0
     dev: true
+
+  /@uiball/loaders/1.2.6_react-dom@18.1.0+react@18.1.0:
+    resolution: {integrity: sha512-Db3be5pG9ciZa1Rxr6Iwv8bIwVP+g00m3GYQFsu3j7B9T16MpHhnGXLksuNtKlePdP3FCTFGpFrXbJz4GG/OOg==}
+    peerDependencies:
+      react: '>=16.8.0'
+      react-dom: '>=16.8.0'
+    dependencies:
+      react: 18.1.0
+      react-dom: 18.1.0_react@18.1.0
+    dev: false
 
   /acorn-jsx/5.3.2_acorn@8.7.1:
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
