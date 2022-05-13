@@ -13,3 +13,7 @@ https://www.figma.com/file/ygb89uq3Ro3EL4K1hZHekE/Brocolli-%26-Co.?node-id=0%3A1
 2. `npm install`
 3. run `npm run start`
 
+# Testing
+theres tests written on cypress for most use cases to run use
+`npm run cypress`
+

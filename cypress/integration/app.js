@@ -80,4 +80,23 @@ describe("requestInviteModal", () => {
       .children()
       .should("contain", "This email address is already in use");
   });
+
+  it.only("should be able to retry with a valid email after failing with used email", () => {
+    cy.get("#fullName").type(fullName);
+    cy.get("#email").type("usedemail@blinq.app");
+    cy.get("#confirmEmail").type("usedemail@blinq.app");
+    cy.get("#requestInviteSubmitButton").click();
+    cy.get("#requestInviteForm")
+      .children()
+      .should("contain", "This email address is already in use");
+
+    cy.get("#email").clear().type(email);
+    cy.get("#confirmEmail").clear().type(email);
+
+    cy.get("#requestInviteSubmitButton").click();
+    cy.get("#requestInviteCompletion").should(
+      "contain",
+      "Thank you we will be in touch soon"
+    );
+  });
 });
